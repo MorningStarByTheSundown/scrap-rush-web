@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1115">
+  <title>SCRAP RUSH</title>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge@2.14.0/dist/browser.min.js"></script>
+  <style>
+    html,body,#unity-container,#unity-canvas{margin:0;width:100%;height:100%;overflow:hidden;background:#0b1115}
+    body{position:fixed;inset:0;touch-action:none}
+    #unity-container{position:absolute;inset:0}
+    #unity-canvas{display:block}
+  </style>
+</head>
+<body>
+  <div id="unity-container"><canvas id="unity-canvas"></canvas></div>
+  <script src="Build/362cf19f4701b8c3038809594cc0f178.loader.js"></script>
+  <script>
+    createUnityInstance(document.querySelector('#unity-canvas'), {
+      dataUrl: 'Build/344d2f64ec721304b184b49d724d2aa2.data',
+      frameworkUrl: 'Build/073612047e2b865e466cc6026cf4d0cb.framework.js',
+      codeUrl: 'Build/4ceaf4afe712c2e97993a05b72da967c.wasm',
+      streamingAssetsUrl: 'StreamingAssets',
+      companyName: 'Scrap Rush Studio',
+      productName: 'SCRAP RUSH',
+      productVersion: '0.33.2'
+    }).catch(function (error) { console.error('Unity startup:', error); });
+  </script>
+</body>
+</html>
